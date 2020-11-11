@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>Electro Store Ecommerce | Single Product</title>
+	<title>Electro Store Ecommerce | Chi tiết sản phẩm</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -307,22 +307,6 @@
 						<del class="mx-2 font-weight-light">$280.00</del>
 						<label>Free delivery</label>
 					</p>
-					<div class="single-infoagile">
-						<ul>
-							<li class="mb-3">
-								Cash on Delivery Eligible.
-							</li>
-							<li class="mb-3">
-								Shipping Speed to Delivery.
-							</li>
-							<li class="mb-3">
-								EMIs from $655/month.
-							</li>
-							<li class="mb-3">
-								Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C
-							</li>
-						</ul>
-					</div>
 					<div class="product-single-w3l">
 						<p class="my-3">
 							<i class="far fa-hand-point-right mr-2"></i>
@@ -343,25 +327,50 @@
 							<li class="mb-1">
 								Exynos 7870 Octa Core 1.6GHz Processor
 							</li>
+							<li>
+								Được bán bởi DaoThanh.10
+							</li>	
 						</ul>
-						<p class="my-sm-4 my-3">
-							<i class="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
-						</p>
+						<div class="quantity">
+							<div class="quantity-select">
+								Số lượng
+								<div class="entry value-minus">&nbsp;</div>
+									<div class="entry value">
+										<span>1</span>
+									</div>
+								<div class="entry value-plus active">&nbsp;</div>
+								Chỉ còn 1 sản phẩm duy nhất
+							</div>
+						</div>
+
 					</div>
 					<div class="occasion-cart">
 						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-							<form action="#" method="post">
+							<form action="checkout.html" method="post">
 								<fieldset>
-									<input type="hidden" name="cmd" value="_cart" />
-									<input type="hidden" name="add" value="1" />
-									<input type="hidden" name="business" value=" " />
-									<input type="hidden" name="item_name" value="Samsung Galaxy J7 Prime" />
-									<input type="hidden" name="amount" value="200.00" />
-									<input type="hidden" name="discount_amount" value="1.00" />
-									<input type="hidden" name="currency_code" value="USD" />
-									<input type="hidden" name="return" value=" " />
-									<input type="hidden" name="cancel_return" value=" " />
-									<input type="submit" name="submit" value="Add to cart" class="button" />
+									<table>
+										<tr>
+											<td><input type="hidden" name="cmd" value="_cart" /></td>
+											<td><input type="hidden" name="add" value="1" /></td>
+										</tr>	
+											
+										<tr>
+											<td><input type="hidden" name="business" value="DaoThanh.10"/></td>
+											<td><input type="hidden" name="item_name" value="Samsung Galaxy J7 Prime" /></td>
+										</tr>	
+											
+										<tr>	
+											<td><input type="hidden" name="amount" value="200.00" /></td>
+											<td><input type="hidden" name="discount_amount" value="1.00" /></td>
+										</tr>
+										<tr colspan = 2>	
+											<td><input type="hidden" name="currency_code" value="USD" /></td>
+										</tr>	
+										<tr>
+											<td><a href="payment.html"><input type="button" name="buynow" value="Mua ngay" class="button" /></a></td>
+											<td><input type="submit" name="addtocart" value="Thêm vào giỏ hàng" class="button" /></td>
+										</tr>	
+									</table>
 								</fieldset>
 							</form>
 						</div>
@@ -458,6 +467,7 @@
 	<!-- //nav smooth scroll -->
 
 	<!-- popup modal (for location)-->
+
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script>
 		$(document).ready(function () {
@@ -475,10 +485,11 @@
 
 		});
 	</script>
+
 	<!-- //popup modal (for location)-->
 
 	<!-- cart-js -->
-	<script src="js/minicart.js"></script>
+	<!-- <script src="js/minicart.js"></script> -->
 	<script>
 		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
@@ -493,8 +504,8 @@
 				total += items[i].get('quantity');
 			}
 
-			if (total < 3) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+			if (total < 1) {
+				alert('The minimum order quantity is 1. Please add more to your shopping cart before checking out');
 				evt.preventDefault();
 			}
 		});

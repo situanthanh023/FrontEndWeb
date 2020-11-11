@@ -45,25 +45,30 @@
 	<div class="agile-main-top">
 		<div class="container-fluid">
 			<div class="row main-top-w3l py-2">
-				<div class="col-lg-6 header-most-top">
+				<div class="col-lg-8 header-most-top">
 				</div>
-				<div class="col-lg-6 header-right mt-lg-0 mt-3">
+				<div class="col-lg-4 header-right ">
 					<!-- header lists -->
 					<ul>
-						<li class="text-center border-right text-white">
-							<a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
-								<i class="fas fa-sign-in-alt mr-2"></i> Log In </a>
+						<li>
+							<button class="btn btn-danger" type="submit">Đăng tin</button>						
 						</li>
-						<li class="text-center text-white">
-							<a href="#" data-toggle="modal" data-target="#exampleModal2" class="text-white">
-								<i class="fas fa-sign-out-alt mr-2"></i>Register </a>
+						<li class="dropdown">
+							<a class="dropdown-toggle col-2" href="#" role="button" >
+								<span><img src="images/man.png" class="rounded-circle" alt="" width="30" height="30"></span>
+							</a>
+							<div class="dropdown-menu">
+								Xin chào: <span style="color:rgb(255,0,0)">Đào Thanh</span>
+								<a class="dropdown-item" href="profile.html">Thông tin cá nhân</a>
+								<a class="dropdown-item" href="index.html">Đăng xuất</a>
+							</div>
 						</li>
 					</ul>
-					<!-- //header lists -->
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- //top-header -->
 
 	<!-- modals -->
 	<!-- log in -->
@@ -376,6 +381,9 @@
 						</tbody>
 					</table>
 				</div>
+				<h4 class="mb-sm-4 mb-3">Tổng số tiền:
+					<span>200 đ</span></h4>
+				<a href="payment.html"><button class="btn btn-danger" type="button">Mua ngay</button></a>
 			</div>
 		</div>
 	</div>
@@ -501,8 +509,8 @@
 				total += items[i].get('quantity');
 			}
 
-			if (total < 3) {
-				alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+			if (total < 1) {
+				alert('The minimum order quantity is 1. Please add more to your shopping cart before checking out');
 				evt.preventDefault();
 			}
 		});
