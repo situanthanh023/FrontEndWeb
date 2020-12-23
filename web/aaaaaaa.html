@@ -47,6 +47,79 @@
     <p>Click vào button để xem két quả</p>
     <button type="button" onclick="sendajax()">Click</button>
     <p id="result"></p>
+    <div class="table-responsive">
+                    <table class="timetable_sub">
+                        <thead>
+                            <tr>
+                                <th>Thứ tự</th>
+                                <th>Tên cửa hàng</th>
+                                <th>Sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Chấp thuận</th>
+                                <th>Loại bỏ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="rem1" id = "sp1">
+                                <td class="invert">1</td>
+                                <td id = "name">A 1</td>
+                                <td class="invert-image" id = "img">
+                                    <a href="single.html">
+                                        <img src="images/a.jpg" alt=" " class="img-responsive">
+                                    </a>
+                                </td>
+                                <td class="invert" id = "nameproduct">Back Cover</td>
+                                <td class="invert">
+                                        <div class="add">
+                                        <input type="submit" name="addproduct" value = "Đồng ý" onclick= 'emailERR("ko")'></div>
+                                </td>
+                                <td class="invert">
+                                    <div class="rem">
+                                        <div class="close1"> </div>
+                                    </div>
+                                </td>
+                                <input type="hidden" name="" id = "#">
+                            </tr>
+                            <tr class="rem2" id = "sp2">
+                                <td class="invert">2</td>
+                                <td>A 2</td>
+                                <td class="invert-image">
+                                    <a href="single2.html">
+                                        <img src="images/a4.jpg" alt=" " class="img-responsive">
+                                    </a>
+                                </td>
+                                <td class="invert">Cordless Trimmer</td>
+                                <td class="invert">
+                                        <div class="add">
+                                        <input type="submit" name="addproduct" value = "Đồng ý"></div>
+                                </td>
+                                <td class="invert">
+                                    <div class="rem">
+                                        <div class="close2"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="rem3" id = "sp3">
+                                <td class="invert">3</td>
+                                <td>A 3</td>
+                                <td class="invert-image">
+                                    <a href="single.html">
+                                        <img src="images/a3.jpg" alt=" " class="img-responsive">
+                                    </a>
+                                </td>
+                                <td class="invert">Nikon Camera</td>
+                                <td class="invert">
+                                        <div class="add">
+                                        <input type="submit" name="addproduct" value = "Đồng ý"></div>
+                                </td>
+                                <td class="invert">
+                                    <div class="rem">
+                                        <div class="close3"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 </body>
 
 </html>

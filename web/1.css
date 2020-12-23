@@ -1,5 +1,7 @@
 *{margin: 0; padding: 0;}
-
+body {
+    counter-reset: first;
+}
 .below-slogan {
     min-height: 55px;
     min-width: 848px;
@@ -155,4 +157,9 @@ img.anh5 {
 }
 .cl-icon-search{
     background: url(images/search.png);
+}
+td.invertcount:before {
+    text-align: center;
+    counter-increment: first;
+    content: counter(first);
 }
