@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ajax javascript toidicode.com</title>
+    <script>
+        var sendajax = function() {
+        //Khoi tao doi tuong
+        var xhttp = new XMLHttpRequest() || ActiveXObject();
+        //Bat su kien thay doi trang thai cuar request
+        xhttp.onreadystatechange = function() {
+                //Kiem tra neu nhu da gui request thanh cong
+                if (this.readyState == 4 && this.status == 200) {
+                    //In ra data nhan duoc
+                    addData(this.responseXML)
+                }
+            }
+            //cau hinh request
+            xhttp.open('GET', 'https://toidicode.com/live/php/relationships.xml', true);
+        //cau hinh header cho request
+        xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        //gui request
+        xhttp.send('data=true');
+    }
+
+    var addData = function(data) {
+        //Tao cau truc table
+        var table = '<table border="1" cellspacing="5" cellpadding="5" style="border-collapse:collapse"><tr><th>ID</th><th>Name</th><th>Age</th><th>Location</th></tr>';
+        //Tim node sister trong xml tra ve
+        var sister = data.getElementsByTagName('sister');
+        //Lap het cac nde tim duoc
+        for (i = 0; i < sister.length; i++) {
+            //Lay du lieu trong node
+            table += '<tr><td>' + (i + 1) + '</td>';
+            table += '<td>' + sister[i].getElementsByTagName('name')[0].childNodes[0].nodeValue + '</td>';
+            table += '<td>' + sister[i].getElementsByTagName('age')[0].childNodes[0].nodeValue + '</td>';
+            table += '<td>' + sister[i].getElementsByTagName('location')[0].childNodes[0].nodeValue + '</td></tr>'
+        }
+        document.getElementById('result').innerHTML = table;
+    }
+</script>
+</head>
+
+<body>
+    <p>Click vào button để xem két quả</p>
+    <button type="button" onclick="sendajax()">Click</button>
+    <p id="result"></p>
+</body>
+
+</html>
+            
